@@ -1,0 +1,41 @@
+N=int(input()) #take the size
+
+Array=list(map(int, input().split(‘ ‘)[:N]))
+
+#input()—takes input
+How do I take 'N' number of an input array in Python 3?
+
+
+If you enter 1 2 3 4 5 it is taken as ‘1 2 3 4 5’
+
+#split(‘ ‘)—splits the string into sequence of elements means converts whitespace #into commas (,)
+
+#split function applicable only for string data type
+
+#[:N]—slicing method it takes only up to N #even if user enters more than N numbers
+
+#map— takes 2 arguments 1st one is a function and 2nd one is sequence of numbers
+
+#It maps sequence of numbers to a function,
+
+#i.e, it applies function to each element in the sequence
+
+#Here it is performing typecasting operation #why we need this because in python by #default input is taken as string so we need to #convert it to int/float format.
+
+#list— this is the container to store the elements. It is a mutable data type means we can add elements in the middle of this array and modify the elements which are already available
+
+Example:
+
+l=[1,2,3]
+
+l[0]=4# works perfectly no error
+
+# but in immutable type like tuple,string,int etc. We cannot modify the available elements and we cannot add in the middle
+
+Example:
+
+t=(1,2,3)
+
+t[0]=3# this gives an error we are trying to modify the elements which are already available
+
+t.append(4) # this works bcz we are adding elements at the end so no problem
