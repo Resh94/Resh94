@@ -1,0 +1,29 @@
+import numpy as np
+def solve (A):
+    A = list(A)
+    arrlen = len(A)
+   
+    if arrlen%2 == 0 and 1 <= arrlen <= 10**5:
+        firsthalf=A[:int(len(A)/2)]
+        secondhalf=A[int(len(A)/2):] 
+        prod = 0
+        for num in firsthalf:
+            if 1<= num <= 10**5:
+                numstr = str(num)
+                prod = prod*10 + int(numstr[0])
+                
+        for num2 in secondhalf:
+            if 1<= num2 <= 10**5:
+                numstr = str(num2)
+                prod = prod*10 + int(numstr[len(numstr)-1])
+                
+        if prod % 11:
+            return('NON')
+        else :
+            return('OUI')
+
+
+N = int(input())
+A = map(int, input().split())
+out_ = solve(A)
+print (out_)
